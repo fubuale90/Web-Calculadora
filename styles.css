@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    background-color: #3a9297;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas para las 5 filas */
+    grid-gap: 10px;
+    width: 300px; /* Ajusta el ancho */
+}
+
+#display {
+    grid-column: span 4;
+    width: 90%;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en total */
+    grid-template-rows: repeat(5, 1fr); /* 5 filas en total */
+    grid-gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #fffefe;
+    color: #010101;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    background-color: #222;
+}
+
+/* Ajustes específicos */
+button.igual {
+    grid-column: span 2; /* El botón '0' ocupa un espacio */
+}
